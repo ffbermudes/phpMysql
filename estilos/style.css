@@ -42,8 +42,32 @@ tbody>tr:first-child{
     width: 100% !important;
 }
 
-.img_mini {
-    width: 100px;
+img.mini {
+    height: 60px;
     border-radius: 3px;
     box-shadow: 2px 2px 8px #000;
+}
+
+table.detalhes {
+    width: 100%;
+}
+
+table.detalhes td {
+    vertical-align: top;
+    /* border: 1px solid black; */
+}
+
+img.detalhesImg {
+    margin-right: 30px;
+    height: 400px;
+}
+
+#descricaoTitle {
+    padding-bottom: .5rem;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+#nota {
+    color: tomato;
 }

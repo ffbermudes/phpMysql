@@ -11,7 +11,3 @@
     $banco->query("SET character_set_connection=utf8mb4");
     $banco->query("SET character_set_client=utf8mb4");
     $banco->query("SET character_set_results=utf8");
-
-    $busca = $banco->query("select * from generos");
-
-?>

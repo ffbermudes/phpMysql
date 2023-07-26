@@ -30,8 +30,8 @@
           while ($reg = $busca->fetch_object()) {
             $caminho = thumb($reg->capa);
             echo "
-            <tr> <td><img src='$caminho' class ='img_mini' />
-            <td> <a href='detalhes.php'>$reg->nome<a>
+            <tr> <td><img src='$caminho' class ='mini' />
+            <td> <a href='detalhes.php?cod=$reg->cod'>$reg->nome<a>
             <td> ADM
             ";
           }
