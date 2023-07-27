@@ -29,7 +29,7 @@
 
         <table class="detalhes">
             <tr><td rowspan='3'><?php
-                echo '<img class="detalhesImg" src="estudonauta/fotos/' .   $busca->capa . '"/>'; 
+                echo '<img class="detalhesImg" src="'. thumb($busca->capa) . '"/>'; 
             ?>
                 <td id="descricaoTitle"><?php echo $busca->nome . ' ' . '<span id="nota">'. 'nota: '. $busca->nota . '/10.00</span>'?>
             <tr><td id="descricaoDesc"><?php echo $busca->descricao; ?>
