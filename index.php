@@ -17,8 +17,14 @@
   <div id="corpo">
 
     <h1>Sistema de Jogos</h1>
+
+    <?php
+      require_once 'includes/busca.php';
+    ?>
+    
     <table class="listagem">
       <?php
+
       //Busca de todos os jogos.
       // aula 06 consulta utilizando join.
       $q = 
@@ -58,7 +64,9 @@
       ?>
     </table>
   </div>
-  <?php $banco->close(); ?>
+  <?php $banco->close(); 
+  require_once 'includes/footer.php';
+  ?>
 </body>
 
 </html>
