@@ -36,7 +36,10 @@
             <tr><td>Adm
         </table>
         <a href="/index.php"><img src="estudonauta/icones/icoback.png"></a>
-        </div>
+
     </div>
+        <?php
+          require_once 'includes/footer.php';
+        ?>
 </body>
 </html>
