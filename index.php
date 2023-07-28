@@ -20,7 +20,17 @@
     <table class="listagem">
       <?php
       //Busca de todos os jogos.
-      $busca = $banco->query("select * from jogos order by nome");
+      // aula 06 consulta utilizando join.
+      $q = 
+      "
+      SELECT j.cod, j.nome, j.genero, j.capa, g.genero, p.produtora
+      FROM jogos j JOIN generos as g
+      ON j.genero = g.cod
+      JOIN produtoras p on j.produtora = p.cod
+      ORDER BY g.cod;
+      ";
+
+      $busca = $banco->query($q);
       if (!$busca) {
         echo '<tr><td> Infelismente a busca deu errado';
       } else {
@@ -29,10 +39,18 @@
         } else {
           while ($reg = $busca->fetch_object()) {
             $caminho = thumb($reg->capa);
-            echo "
-            <tr> <td><img src='$caminho' class ='mini' />
-            <td> <a href='detalhes.php?cod=$reg->cod'>$reg->nome<a>
-            <td> ADM
+            echo 
+            "
+              <tr> 
+              <td><img src='$caminho' class ='mini' />
+              <td> 
+              <a href='detalhes.php?cod=$reg->cod'> 
+                $reg->nome
+              </a>
+              <br>
+              $reg->produtora
+              <td> $reg->genero
+              <td> ADM
             ";
           }
         }

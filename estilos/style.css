@@ -71,3 +71,10 @@ img.detalhesImg {
 #nota {
     color: tomato;
 }
+
+.selectJoin {
+    font-weight: bolder;
+    font-family: monospace;
+    color: #333;
+    margin: 20px auto;
+}
